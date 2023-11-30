@@ -11,11 +11,11 @@ const heroes = [
     { heroName: "Pantera Negra", exp: 8201 }
 ];
 
-heroes.forEach(hero => {
-    let heroLevel = getHeroLevel(hero);
+for(i = 0; i < heroes.length; i++){
+    let heroLevel = getHeroLevel(heroes[i]);
 
-    console.log(`O Herói de nome ${hero.heroName} está no nível de ${heroLevel}!`);
-});
+    console.log(`O Herói de nome ${heroes[i].heroName} está no nível de ${heroLevel}!`);
+};
 
 function getHeroLevel(hero) {
     if (hero.exp <= 1000) {
